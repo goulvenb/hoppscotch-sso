@@ -78,6 +78,12 @@ async function signInUserWithMicrosoftFB() {
   })
 }
 
+async function signInUserWithOidcFB() {
+  await Io.openExternalLink({
+    url: `${import.meta.env.VITE_BACKEND_API_URL}/auth/oidc?redirect_uri=desktop`,
+  })
+}
+
 async function getInitialUserDetails(): Promise<
   GQLResponse | { error: string }
 > {
@@ -446,6 +452,10 @@ export const def: AuthPlatformDef = {
     await signInUserWithMicrosoftFB()
   },
 
+  async signInUserWithOidc() {
+    await signInUserWithOidcFB()
+  },
+  
   async signInWithEmailLink(_email: string, url: string) {
     const deviceIdentifier =
       await persistenceService.getLocalConfig("deviceIdentifier")
