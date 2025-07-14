@@ -113,6 +113,7 @@
     "continue_with_google": "Continua con Google",
     "continue_with_microsoft": "Continue with Microsoft",
     "continue_with_oidc": "Continua con OIDC",
+    "continue_with_saml": "Continua con SAML",
     "email": "E-mail",
     "logged_out": "Disconnesso",
     "login": "Accedi",

@@ -113,6 +113,7 @@
     "continue_with_google": "Продолжить с Google",
     "continue_with_microsoft": "Продолжить с Microsoft",
     "continue_with_oidc": "Продолжить с OIDC",
+    "continue_with_saml": "Продолжить с SAML",
     "email": "Электронная почта",
     "logged_out": "Успешно вышли. Будем скучать!",
     "login": "Авторизоваться",

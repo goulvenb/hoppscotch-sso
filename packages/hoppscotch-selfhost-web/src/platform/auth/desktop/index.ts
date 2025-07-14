@@ -84,6 +84,12 @@ async function signInUserWithOidcFB() {
   })
 }
 
+async function signInUserWithSamlFB() {
+  await Io.openExternalLink({
+    url: `${import.meta.env.VITE_BACKEND_API_URL}/auth/saml?redirect_uri=desktop`,
+  })
+}
+
 async function getInitialUserDetails(): Promise<
   GQLResponse | { error: string }
 > {
@@ -455,7 +461,11 @@ export const def: AuthPlatformDef = {
   async signInUserWithOidc() {
     await signInUserWithOidcFB()
   },
-  
+
+  async signInUserWithSaml() {
+    await signInUserWithSamlFB()
+  },
+
   async signInWithEmailLink(_email: string, url: string) {
     const deviceIdentifier =
       await persistenceService.getLocalConfig("deviceIdentifier")

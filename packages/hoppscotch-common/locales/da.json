@@ -113,6 +113,7 @@
     "continue_with_google": "Fortsæt med Google",
     "continue_with_microsoft": "Fortsæt med Microsoft",
     "continue_with_oidc": "Fortsæt med OIDC",
+    "continue_with_saml": "Fortsæt med SAML",
     "email": "E-mail",
     "logged_out": "Logget ud",
     "login": "Log ind",

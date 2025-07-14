@@ -197,6 +197,9 @@ importers:
       '@nestjs/throttler':
         specifier: 6.4.0
         version: 6.4.0(@nestjs/common@11.1.1(class-transformer@0.5.1)(class-validator@0.14.2)(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.1.1)(reflect-metadata@0.2.2)
+      '@node-saml/passport-saml':
+        specifier: 5.0.1
+        version: 5.0.1
       '@prisma/client':
         specifier: 6.8.2
         version: 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
@@ -330,6 +333,9 @@ importers:
       '@types/nodemailer':
         specifier: 6.4.17
         version: 6.4.17
+      '@types/passport':
+        specifier: 1.0.17
+        version: 1.0.17
       '@types/passport-github2':
         specifier: 1.2.9
         version: 1.2.9
@@ -343,7 +349,7 @@ importers:
         specifier: 1.0.3
         version: 1.0.3
       '@types/passport-openidconnect':
-        specifier: ^0.1.3
+        specifier: 0.1.3
         version: 0.1.3
       '@types/supertest':
         specifier: 6.0.3
@@ -5281,6 +5287,14 @@ packages:
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
     engines: {node: ^14.21.3 || >=16}
 
+  '@node-saml/node-saml@5.0.1':
+    resolution: {integrity: sha512-YQzFPEC+CnsfO9AFYnwfYZKIzOLx3kITaC1HrjHVLTo6hxcQhc+LgHODOMvW4VCV95Gwrz1MshRUWCPzkDqmnA==}
+    engines: {node: '>= 18'}
+
+  '@node-saml/passport-saml@5.0.1':
+    resolution: {integrity: sha512-fMztg3zfSnjLEgxvpl6HaDMNeh0xeQX4QHiF9e2Lsie2dc4qFE37XYbQZhVmn8XJ2awPpSWLQ736UskYgGU8lQ==}
+    engines: {node: '>= 18'}
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -6194,17 +6208,17 @@ packages:
   '@types/passport-microsoft@1.0.3':
     resolution: {integrity: sha512-Mqm/iTWEhnlS7RcgVlQMyMcXoqt51NbHtXZFAqcjSCZj4iUBu1MTlpw65X3xZ974K2WrlLQhOm3UMmLoUkMaMA==}
 
-  '@types/passport-openidconnect@0.1.3':
-    resolution: {integrity: sha512-k1Ni7bG/9OZNo2Qpjg2W6GajL+pww6ZPaNWMXfpteCX4dXf4QgaZLt2hjR5IiPrqwBT9+W8KjCTJ/uhGIoBx/g==}
-
   '@types/passport-oauth2@1.4.15':
     resolution: {integrity: sha512-9cUTP/HStNSZmhxXGuRrBJfEWzIEJRub2eyJu3CvkA+8HAMc9W3aKdFhVq+Qz1hi42qn+GvSAnz3zwacDSYWpw==}
+
+  '@types/passport-openidconnect@0.1.3':
+    resolution: {integrity: sha512-k1Ni7bG/9OZNo2Qpjg2W6GajL+pww6ZPaNWMXfpteCX4dXf4QgaZLt2hjR5IiPrqwBT9+W8KjCTJ/uhGIoBx/g==}
 
   '@types/passport-strategy@0.2.38':
     resolution: {integrity: sha512-GC6eMqqojOooq993Tmnmp7AUTbbQSgilyvpCYQjT+H6JfG/g6RGc7nXEniZlp0zyKJ0WUdOiZWLBZft9Yug1uA==}
 
-  '@types/passport@1.0.16':
-    resolution: {integrity: sha512-FD0qD5hbPWQzaM0wHUnJ/T0BBCJBxCeemtnCwc/ThhTg3x9jfrAcRUmj5Dopza+MfFS9acTe3wk7rcVnRIp/0A==}
+  '@types/passport@1.0.17':
+    resolution: {integrity: sha512-aciLyx+wDwT2t2/kJGJR2AEeBz0nJU4WuRX04Wu9Dqc5lSUtwu0WERPHYsLhF9PtseiAMPBGNUOtFjxZ56prsg==}
 
   '@types/postman-collection@3.5.10':
     resolution: {integrity: sha512-l8xAUZNW9MzKWyeWuPgQlnyvpX8beeLqXYZTixr55Figae8/0gFb5l5GcU1y+3yeDmbXdY57cGxdvu+4OGbMdg==}
@@ -6283,6 +6297,12 @@ packages:
 
   '@types/ws@8.5.12':
     resolution: {integrity: sha512-3tPRkv1EtkDpzlgyKyI8pGsGZAGPEaXeu0DOj5DI25Ja91bdAYddYHbADRYVrZMRbfW+1l5YwXVDKohDJNQxkQ==}
+
+  '@types/xml-encryption@1.2.4':
+    resolution: {integrity: sha512-I69K/WW1Dv7j6O3jh13z0X8sLWJRXbu5xnHDl9yHzUNDUBtUoBY058eb5s+x/WG6yZC1h8aKdI2EoyEPjyEh+Q==}
+
+  '@types/xml2js@0.4.14':
+    resolution: {integrity: sha512-4YnrRemBShWRO2QjvUin8ESA41rH+9nQGLUGZV/1IDhi3SL9OhdpNC/MrulTWuptXKwhx/aDxE7toV0f/ypIXQ==}
 
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
@@ -6911,6 +6931,10 @@ packages:
   '@whatwg-node/promise-helpers@1.3.2':
     resolution: {integrity: sha512-Nst5JdK47VIl9UcGwtv2Rcgyn5lWtZ0/mhRQ4G8NN2isxpq2TO30iqHzmwoJycjWuyUfg3GFXqP/gFHXeV57IA==}
     engines: {node: '>=16.0.0'}
+
+  '@xmldom/is-dom-node@1.0.1':
+    resolution: {integrity: sha512-CJDxIgE5I0FH+ttq/Fxy6nRpxP70+e2O048EPe85J2use3XKdatVM7dDVvFNjQudd9B49NPoZ+8PG49zj4Er8Q==}
+    engines: {node: '>= 16'}
 
   '@xmldom/xmldom@0.8.10':
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
@@ -11371,13 +11395,13 @@ packages:
     resolution: {integrity: sha512-7bOcjEmZCHg5qD55iHaMD/mgBxPtXLbqAwmKox5IsqOSEU50WJk5nQKK4lxKdBHLZ0hf+gzrFgDsTybJP18/JA==}
     engines: {node: '>= 0.4.0'}
 
-  passport-openidconnect@0.1.2:
-    resolution: {integrity: sha512-JX3rTyW+KFZ/E9OF/IpXJPbyLO9vGzcmXB5FgSP2jfL3LGKJPdV7zUE8rWeKeeI/iueQggOeFa3onrCmhxXZTg==}
-    engines: {node: '>= 0.6.0'}
-
   passport-oauth2@1.8.0:
     resolution: {integrity: sha512-cjsQbOrXIDE4P8nNb3FQRCCmJJ/utnFKEz2NX209f7KOHPoX18gF7gBzBbLLsj2/je4KrgiwLLGjf0lm9rtTBA==}
     engines: {node: '>= 0.4.0'}
+
+  passport-openidconnect@0.1.2:
+    resolution: {integrity: sha512-JX3rTyW+KFZ/E9OF/IpXJPbyLO9vGzcmXB5FgSP2jfL3LGKJPdV7zUE8rWeKeeI/iueQggOeFa3onrCmhxXZTg==}
+    engines: {node: '>= 0.6.0'}
 
   passport-strategy@1.0.0:
     resolution: {integrity: sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==}
@@ -14377,6 +14401,13 @@ packages:
       utf-8-validate:
         optional: true
 
+  xml-crypto@6.1.2:
+    resolution: {integrity: sha512-leBOVQdVi8FvPJrMYoum7Ici9qyxfE4kVi+AkpUoYCSXaQF4IlBm1cneTK9oAxR61LpYxTx7lNcsnBIeRpGW2w==}
+    engines: {node: '>=16'}
+
+  xml-encryption@3.1.0:
+    resolution: {integrity: sha512-PV7qnYpoAMXbf1kvQkqMScLeQpjCMixddAKq9PtqVrho8HnYbBOWNfG0kA4R7zxQDo7w9kiYAyzS/ullAyO55Q==}
+
   xml-formatter@3.6.3:
     resolution: {integrity: sha512-++x1TlRO1FRlQ82AZ4WnoCSufaI/PT/sycn4K8nRl4gnrNC1uYY2VV/67aALZ2m0Q4Q/BLj/L69K360Itw9NNg==}
     engines: {node: '>= 16'}
@@ -14397,6 +14428,10 @@ packages:
     resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
     engines: {node: '>=4.0.0'}
 
+  xml2js@0.6.2:
+    resolution: {integrity: sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==}
+    engines: {node: '>=4.0.0'}
+
   xmlbuilder2@3.1.1:
     resolution: {integrity: sha512-WCSfbfZnQDdLQLiMdGUQpMxxckeQ4oZNMNhLVkcekTu7xhD4tuUDyAPoY8CwXvBYE6LwBHd6QW2WZXlOWr1vCw==}
     engines: {node: '>=12.0'}
@@ -14404,6 +14439,10 @@ packages:
   xmlbuilder@11.0.1:
     resolution: {integrity: sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==}
     engines: {node: '>=4.0'}
+
+  xmlbuilder@15.1.1:
+    resolution: {integrity: sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==}
+    engines: {node: '>=8.0'}
 
   xmlchars@2.2.0:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
@@ -14415,6 +14454,18 @@ packages:
   xmlhttprequest-ssl@2.1.1:
     resolution: {integrity: sha512-ptjR8YSJIXoA3Mbv5po7RtSYHO6mZr8s7i5VGmEk7QY2pQWyT1o0N+W1gKbOyJPUCGXGnuw0wqe8f0L6Y0ny7g==}
     engines: {node: '>=0.4.0'}
+
+  xpath@0.0.32:
+    resolution: {integrity: sha512-rxMJhSIoiO8vXcWvSifKqhvV96GjiD5wYb8/QHdoRyQvraTpp4IEv944nhGausZZ3u7dhQXteZuZbaqfpB7uYw==}
+    engines: {node: '>=0.6.0'}
+
+  xpath@0.0.33:
+    resolution: {integrity: sha512-NNXnzrkDrAzalLhIUc01jO2mOzXGXh1JwPgkihcLLzw98c0WgYDmmjSh1Kl3wzaxSVWMuA+fe0WTWOBDWCBmNA==}
+    engines: {node: '>=0.6.0'}
+
+  xpath@0.0.34:
+    resolution: {integrity: sha512-FxF6+rkr1rNSQrhUNYrAFJpRXNzlDoMxeXN5qI84939ylEv3qqPFKa85Oxr6tDaJKqwW6KKyo2v26TSv3k6LeA==}
+    engines: {node: '>=0.6.0'}
 
   xss@1.0.15:
     resolution: {integrity: sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==}
@@ -19542,6 +19593,34 @@ snapshots:
 
   '@noble/hashes@1.8.0': {}
 
+  '@node-saml/node-saml@5.0.1':
+    dependencies:
+      '@types/debug': 4.1.12
+      '@types/qs': 6.9.16
+      '@types/xml-encryption': 1.2.4
+      '@types/xml2js': 0.4.14
+      '@xmldom/is-dom-node': 1.0.1
+      '@xmldom/xmldom': 0.8.10
+      debug: 4.4.1
+      xml-crypto: 6.1.2
+      xml-encryption: 3.1.0
+      xml2js: 0.6.2
+      xmlbuilder: 15.1.1
+      xpath: 0.0.34
+    transitivePeerDependencies:
+      - supports-color
+
+  '@node-saml/passport-saml@5.0.1':
+    dependencies:
+      '@node-saml/node-saml': 5.0.1
+      '@types/express': 4.17.21
+      '@types/passport': 1.0.17
+      '@types/passport-strategy': 0.2.38
+      passport: 0.7.0
+      passport-strategy: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -20404,13 +20483,13 @@ snapshots:
   '@types/passport-github2@1.2.9':
     dependencies:
       '@types/express': 5.0.2
-      '@types/passport': 1.0.16
+      '@types/passport': 1.0.17
       '@types/passport-oauth2': 1.4.15
 
   '@types/passport-google-oauth20@2.0.16':
     dependencies:
       '@types/express': 5.0.2
-      '@types/passport': 1.0.16
+      '@types/passport': 1.0.17
       '@types/passport-oauth2': 1.4.15
 
   '@types/passport-jwt@4.0.1':
@@ -20422,25 +20501,25 @@ snapshots:
     dependencies:
       '@types/passport-oauth2': 1.4.15
 
-  '@types/passport-openidconnect@0.1.3':
-    dependencies:
-      '@types/express': 5.0.2
-      '@types/oauth': 0.9.6
-      '@types/passport': 1.0.17
-      '@types/passport-strategy': 0.2.38
-
   '@types/passport-oauth2@1.4.15':
     dependencies:
       '@types/express': 5.0.2
       '@types/oauth': 0.9.4
-      '@types/passport': 1.0.16
+      '@types/passport': 1.0.17
+
+  '@types/passport-openidconnect@0.1.3':
+    dependencies:
+      '@types/express': 5.0.2
+      '@types/oauth': 0.9.4
+      '@types/passport': 1.0.17
+      '@types/passport-strategy': 0.2.38
 
   '@types/passport-strategy@0.2.38':
     dependencies:
       '@types/express': 5.0.2
-      '@types/passport': 1.0.16
+      '@types/passport': 1.0.17
 
-  '@types/passport@1.0.16':
+  '@types/passport@1.0.17':
     dependencies:
       '@types/express': 5.0.2
 
@@ -20528,6 +20607,14 @@ snapshots:
       '@types/node': 22.15.19
 
   '@types/ws@8.5.12':
+    dependencies:
+      '@types/node': 22.15.19
+
+  '@types/xml-encryption@1.2.4':
+    dependencies:
+      '@types/node': 22.15.19
+
+  '@types/xml2js@0.4.14':
     dependencies:
       '@types/node': 22.15.19
 
@@ -21529,6 +21616,8 @@ snapshots:
   '@whatwg-node/promise-helpers@1.3.2':
     dependencies:
       tslib: 2.8.1
+
+  '@xmldom/is-dom-node@1.0.1': {}
 
   '@xmldom/xmldom@0.8.10': {}
 
@@ -27396,11 +27485,6 @@ snapshots:
     dependencies:
       passport-oauth2: 1.8.0
 
-  passport-openidconnect@0.1.2:
-    dependencies:
-      oauth: 0.10.2
-      passport-strategy: 1.0.0
-
   passport-oauth2@1.8.0:
     dependencies:
       base64url: 3.0.1
@@ -27408,6 +27492,11 @@ snapshots:
       passport-strategy: 1.0.0
       uid2: 0.0.4
       utils-merge: 1.0.1
+
+  passport-openidconnect@0.1.2:
+    dependencies:
+      oauth: 0.10.0
+      passport-strategy: 1.0.0
 
   passport-strategy@1.0.0: {}
 
@@ -31160,6 +31249,18 @@ snapshots:
 
   ws@8.18.2: {}
 
+  xml-crypto@6.1.2:
+    dependencies:
+      '@xmldom/is-dom-node': 1.0.1
+      '@xmldom/xmldom': 0.8.10
+      xpath: 0.0.33
+
+  xml-encryption@3.1.0:
+    dependencies:
+      '@xmldom/xmldom': 0.8.10
+      escape-html: 1.0.3
+      xpath: 0.0.32
+
   xml-formatter@3.6.3:
     dependencies:
       xml-parser-xo: 4.1.2
@@ -31175,6 +31276,11 @@ snapshots:
       sax: 1.4.1
       xmlbuilder: 11.0.1
 
+  xml2js@0.6.2:
+    dependencies:
+      sax: 1.4.1
+      xmlbuilder: 11.0.1
+
   xmlbuilder2@3.1.1:
     dependencies:
       '@oozcitak/dom': 1.15.10
@@ -31184,11 +31290,19 @@ snapshots:
 
   xmlbuilder@11.0.1: {}
 
+  xmlbuilder@15.1.1: {}
+
   xmlchars@2.2.0: {}
 
   xmlhttprequest-ssl@1.6.3: {}
 
   xmlhttprequest-ssl@2.1.1: {}
+
+  xpath@0.0.32: {}
+
+  xpath@0.0.33: {}
+
+  xpath@0.0.34: {}
 
   xss@1.0.15:
     dependencies:

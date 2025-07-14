@@ -184,6 +184,7 @@
     "continue_with_google": "Mit Google anmelden",
     "continue_with_microsoft": "Mit Microsoft anmelden",
     "continue_with_oidc": "Mit OIDC anmelden",
+    "continue_with_saml": "Mit SAML anmelden",
     "email": "E-Mail-Adresse",
     "logged_out": "Abgemeldet",
     "login": "Anmelden",

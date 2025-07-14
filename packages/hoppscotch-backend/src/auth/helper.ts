@@ -28,6 +28,7 @@ export enum AuthProvider {
   GITHUB = 'GITHUB',
   MICROSOFT = 'MICROSOFT',
   OIDC = 'OIDC',
+  SAML = 'SAML',
   EMAIL = 'EMAIL',
 }
 

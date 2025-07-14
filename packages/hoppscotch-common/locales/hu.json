@@ -113,6 +113,7 @@
     "continue_with_google": "Folytatás Google használatával",
     "continue_with_microsoft": "Folytatás Microsoft használatával",
     "continue_with_oidc": "Folytatás OIDC használatával",
+    "continue_with_saml": "Folytatás SAML használatával",
     "email": "E-mail",
     "logged_out": "Kijelentkezett",
     "login": "Bejelentkezés",

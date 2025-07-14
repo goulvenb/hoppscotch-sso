@@ -113,6 +113,7 @@
     "continue_with_google": "Continuați cu Google",
     "continue_with_microsoft": "Continuați cu Microsoft",
     "continue_with_oidc": "Continuați cu OIDC",
+    "continue_with_saml": "Continuați cu SAML",
     "email": "E-mail",
     "logged_out": "Delogat",
     "login": "Autentificare",

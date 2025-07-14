@@ -10,6 +10,7 @@ import { GoogleStrategy } from './strategies/google.strategy';
 import { GithubStrategy } from './strategies/github.strategy';
 import { MicrosoftStrategy } from './strategies/microsoft.strategy';
 import { OidcStrategy } from './strategies/oidc.strategy';
+import { SamlStrategy } from './strategies/saml.strategy';
 import { AuthProvider, authProviderCheck } from './helper';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import {
@@ -56,6 +57,9 @@ export class AuthModule {
         : []),
       ...(authProviderCheck(AuthProvider.OIDC, allowedAuthProviders)
         ? [OidcStrategy]
+        : []),
+      ...(authProviderCheck(AuthProvider.SAML, allowedAuthProviders)
+        ? [SamlStrategy]
         : []),
     ];
 
