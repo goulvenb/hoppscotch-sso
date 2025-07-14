@@ -185,6 +185,7 @@
     "continue_with_google": "Continue with Google",
     "continue_with_microsoft": "Continue with Microsoft",
     "continue_with_oidc": "Continue with OIDC",
+    "continue_with_saml": "Continue with SAML",
     "email": "Email",
     "logged_out": "Logged out",
     "login": "Login",

@@ -113,6 +113,7 @@
     "continue_with_google": "المواصلة من خلال جوجل",
     "continue_with_microsoft": "المواصلة من خلال مايكروسوفت",
     "continue_with_oidc": "تواصل مع OIDC",
+    "continue_with_saml": "تواصل مع SAML",
     "email": "بريد إلكتروني",
     "logged_out": "تسجيل الخروج",
     "login": "تسجيل الدخول",

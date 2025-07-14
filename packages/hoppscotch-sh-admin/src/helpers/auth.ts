@@ -193,6 +193,12 @@ export const auth = {
     }/auth/oidc?redirect_uri=${import.meta.env.VITE_ADMIN_URL}`;
   },
 
+  signInUserWithSaml: () => {
+    window.location.href = `${
+      import.meta.env.VITE_BACKEND_API_URL
+    }/auth/saml?redirect_uri=${import.meta.env.VITE_ADMIN_URL}`;
+  },
+
   signInWithEmailLink: (url: string) => {
     const urlObject = new URL(url);
     const searchParams = new URLSearchParams(urlObject.search);

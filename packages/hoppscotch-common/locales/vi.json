@@ -113,6 +113,7 @@
     "continue_with_google": "Tiếp tục bằng Google",
     "continue_with_microsoft": "Tiếp tục bằng Microsoft",
     "continue_with_oidc": "Tiếp tục bằng OIDC",
+    "continue_with_saml": "Tiếp tục bằng SAML",
     "email": "Email",
     "logged_out": "Đã đăng xuất",
     "login": "Đăng nhập",

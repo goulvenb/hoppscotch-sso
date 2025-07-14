@@ -113,6 +113,7 @@
     "continue_with_google": "המשך עם גוגל",
     "continue_with_microsoft": "Continue with Microsoft",
     "continue_with_oidc": "המשך עם OIDC",
+    "continue_with_saml": "המשך עם SAML",
     "email": "אימייל",
     "logged_out": "התנתק",
     "login": "התחברות",

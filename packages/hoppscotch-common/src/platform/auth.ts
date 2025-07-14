@@ -226,6 +226,11 @@ export type AuthPlatformDef = {
    * @returns A promise that resolves with the user info when auth is completed
    */
   signInUserWithOidc: () => Promise<void>
+  /**
+   * Signs user in with Saml.
+   * @returns A promise that resolves with the user info when auth is completed
+   */
+  signInUserWithSaml: () => Promise<void>
 
   /**
    * Signs out the user from auth

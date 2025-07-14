@@ -113,6 +113,7 @@
     "continue_with_google": "Gaan voort met Google",
     "continue_with_microsoft": "Continue with Microsoft",
     "continue_with_oidc": "Gaan voort met OIDC",
+    "continue_with_saml": "Gaan voort met SAML",
     "email": "E -pos",
     "logged_out": "Uitgeteken",
     "login": "Teken aan",

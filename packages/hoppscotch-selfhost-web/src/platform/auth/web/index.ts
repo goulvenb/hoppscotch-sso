@@ -42,6 +42,10 @@ async function signInUserWithOidcFB() {
   window.location.href = `${import.meta.env.VITE_BACKEND_API_URL}/auth/oidc`
 }
 
+async function signInUserWithSamlFB() {
+  window.location.href = `${import.meta.env.VITE_BACKEND_API_URL}/auth/saml`
+}
+
 async function getInitialUserDetails() {
   const res = await axios.post<{
     data?: {
@@ -301,6 +305,9 @@ export const def: AuthPlatformDef = {
   },
   async signInUserWithOidc() {
     await signInUserWithOidcFB()
+  },
+  async signInUserWithSaml() {
+    await signInUserWithSamlFB()
   },
   async signInWithEmailLink(email: string, url: string) {
     const urlObject = new URL(url)

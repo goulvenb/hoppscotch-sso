@@ -188,6 +188,7 @@ Help us to translate Hoppscotch. Please read [`TRANSLATIONS`](TRANSLATIONS.md) f
 - Google
 - Microsoft
 - OIDC (OpenID Connect)
+- SAML (Security Assertion Markup Language)
 - Email
 - SSO (Single Sign-On)[^EE]
 

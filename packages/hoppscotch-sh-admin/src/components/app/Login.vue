@@ -53,6 +53,12 @@
           @click="signInWithOidc"
         />
         <HoppSmartItem
+          v-if="allowedAuthProviders.includes('SAML')"
+          :loading="signingInWithSaml"
+          :icon="IconSaml"
+          :label="t('state.continue_saml')"
+          @click="signInWithSaml"
+        />
         <HoppSmartItem
           v-if="allowedAuthProviders.includes('EMAIL')"
           :icon="IconEmail"
@@ -169,6 +175,7 @@ import IconGithub from '~icons/auth/github';
 import IconGoogle from '~icons/auth/google';
 import IconMicrosoft from '~icons/auth/microsoft';
 import IconOidc from '~icons/auth/oidc';
+import IconSaml from '~icons/auth/saml';
 import IconArrowLeft from '~icons/lucide/arrow-left';
 import IconFileText from '~icons/lucide/file-text';
 
@@ -187,6 +194,7 @@ const signingInWithGoogle = ref(false);
 const signingInWithGitHub = ref(false);
 const signingInWithMicrosoft = ref(false);
 const signingInWithOidc = ref(false);
+const signingInWithSaml = ref(false);
 const signingInWithEmail = ref(false);
 const mode = ref('sign-in');
 const nonAdminUser = ref(false);
@@ -251,6 +259,19 @@ const signInWithOidc = () => {
   }
 
   signingInWithOidc.value = false;
+}
+
+const signInWithSaml = () => {
+  signingInWithSaml.value = true;
+
+  try {
+    auth.signInUserWithSaml();
+  } catch (e) {
+    console.error(e);
+    toast.error(t('state.saml_signin_failure'));
+  }
+
+  signingInWithSaml.value = false;
 }
 
 const signInWithEmail = async () => {

@@ -24,6 +24,7 @@ import { GoogleSSOGuard } from './guards/google-sso.guard';
 import { GithubSSOGuard } from './guards/github-sso.guard';
 import { MicrosoftSSOGuard } from './guards/microsoft-sso-.guard';
 import { OidcSSOGuard } from './guards/oidc-sso.guard';
+import { SamlSSOGuard } from './guards/saml-sso.guard';
 import { ThrottlerBehindProxyGuard } from 'src/guards/throttler-behind-proxy.guard';
 import { SkipThrottle } from '@nestjs/throttler';
 import { AUTH_PROVIDER_NOT_SPECIFIED } from 'src/errors';
@@ -201,6 +202,27 @@ export class AuthController {
       true,
       req.authInfo.state.redirect_uri,
     );
+  }
+
+  /**
+   ** Route to initiate SSO auth via SAML
+   */
+  @Get('saml')
+  @UseGuards(SamlSSOGuard)
+  async samlAuth(@Request() req) {}
+
+  /**
+   ** Callback URL for SAML SSO
+   * @see https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow#how-it-works
+   */
+  @Post('saml/callback')
+  @SkipThrottle()
+  @UseGuards(SamlSSOGuard)
+  @UseInterceptors(UserLastLoginInterceptor)
+  async samlAuthRedirect(@Request() req, @Res() res) {
+    const authTokens = await this.authService.generateAuthTokens(req.user.uid);
+    if (E.isLeft(authTokens)) throwHTTPErr(authTokens.left);
+    authCookieHandler(res, authTokens.right, true, null);
   }
 
   /**
